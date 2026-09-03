@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_content_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pegiat lingkungan mencurigai kebakaran hutan dan lahan di area gambut dekat Jembatan Tumbang Nusa, Kabupaten Pulang Pisau, Kalimantan Tengah 'sengaja dibakar' lantaran sudah terjadi beberapa kali sejak awal Juli lalu. Kebakaran terakhir yang berlangsung pada Minggu (30/08) malam, kata Direktur Eksekutif Daerah Walhi Kalimantan Tengah, Janang Firman Palanungkai, disebut menjadi yang terbesar dan terbilang parah karena dekat dengan permukiman penduduk. Berdasarkan pemantauan IQAir, kualitas udara di Kota Palangkaraya memburuk seiring pekatnya kabut asap. Konsentrasi PM2.5 bahkan menembus angka 128.4 µg/m³ pada Senin malam. Angka itu menandakan kualitas udara 'sangat tidak sehat'. Angka tersebut jauh berada di atas ambang kategori berbahaya. Kondisi ini juga berdampak pada jarak pandang yang mengalami penurunan hingga sekitar 1-1,2 kilometer di sejumlah wilayah. Seorang warga Palangkaraya, Edithia, sampai harus mengungsi bersama ibu dan kakaknya ke Jakarta gara-gara kabut asap disertai hujan abu sisa kebakaran yang tak henti sejak dua pekan belakangan dan terparah pada Minggu kemarin."
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_title_news"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/image_news"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:srcCompat="@drawable/kebakaran" />
+
+            <TextView
+                android:id="@+id/text_title_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Karhutla membara di lahan gambut Kalimantan Tengah, sengaja dibakar?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/image_news"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Selanjutnya"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Sebelumnya"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_next"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
